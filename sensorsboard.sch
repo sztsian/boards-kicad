@@ -25,17 +25,6 @@ F 3 "~" H 1500 3650 50  0001 C CNN
 	1    1500 3650
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x04_Male J4
-U 1 1 5C796D41
-P 2750 4000
-F 0 "J4" H 2856 4278 50  0000 C CNN
-F 1 "SWD" H 2856 4187 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2750 4000 50  0001 C CNN
-F 3 "~" H 2750 4000 50  0001 C CNN
-	1    2750 4000
-	1    0    0    -1  
-$EndComp
 Text GLabel 1150 4200 0    50   Input ~ 0
 I2C_SDA
 Text GLabel 1200 1750 0    50   Input ~ 0
@@ -124,12 +113,12 @@ Connection ~ 2550 3200
 $Comp
 L power:GND #PWR08
 U 1 1 5C7983EC
-P 2950 4100
-F 0 "#PWR08" H 2950 3850 50  0001 C CNN
-F 1 "GND" V 2955 3972 50  0000 R CNN
-F 2 "" H 2950 4100 50  0001 C CNN
-F 3 "" H 2950 4100 50  0001 C CNN
-	1    2950 4100
+P 2750 4350
+F 0 "#PWR08" H 2750 4100 50  0001 C CNN
+F 1 "GND" V 2755 4222 50  0000 R CNN
+F 2 "" H 2750 4350 50  0001 C CNN
+F 3 "" H 2750 4350 50  0001 C CNN
+	1    2750 4350
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -158,12 +147,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR09
 U 1 1 5C798971
-P 2950 4200
-F 0 "#PWR09" H 2950 4050 50  0001 C CNN
-F 1 "+3.3V" V 2965 4328 50  0000 L CNN
-F 2 "" H 2950 4200 50  0001 C CNN
-F 3 "" H 2950 4200 50  0001 C CNN
-	1    2950 4200
+P 2750 4450
+F 0 "#PWR09" H 2750 4300 50  0001 C CNN
+F 1 "+3.3V" V 2765 4578 50  0000 L CNN
+F 2 "" H 2750 4450 50  0001 C CNN
+F 3 "" H 2750 4450 50  0001 C CNN
+	1    2750 4450
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1143,68 +1132,24 @@ Wire Wire Line
 Connection ~ 10600 3100
 Wire Wire Line
 	10600 3100 10650 3100
-$Comp
-L Connector:TestPoint TP1
-U 1 1 5C7DD15B
-P 10150 3650
-F 0 "TP1" V 10104 3837 50  0000 L CNN
-F 1 "SWCLK_SELF" V 10195 3837 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 10350 3650 50  0001 C CNN
-F 3 "~" H 10350 3650 50  0001 C CNN
-	1    10150 3650
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP2
-U 1 1 5C7DFB91
-P 10150 3800
-F 0 "TP2" V 10104 3988 50  0000 L CNN
-F 1 "SWDIO_SELF" V 10195 3988 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 10350 3800 50  0001 C CNN
-F 3 "~" H 10350 3800 50  0001 C CNN
-	1    10150 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP3
-U 1 1 5C7DFC88
-P 10150 3950
-F 0 "TP3" V 10104 4138 50  0000 L CNN
-F 1 "NRST" V 10195 4138 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 10350 3950 50  0001 C CNN
-F 3 "~" H 10350 3950 50  0001 C CNN
-	1    10150 3950
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP4
-U 1 1 5C7E1747
-P 10150 4100
-F 0 "TP4" V 10104 4288 50  0000 L CNN
-F 1 "TestPoint" V 10195 4288 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm" H 10350 4100 50  0001 C CNN
-F 3 "~" H 10350 4100 50  0001 C CNN
-	1    10150 4100
-	0    1    1    0   
-$EndComp
 Text GLabel 6700 1750 0    50   Input ~ 0
 RESET1-TP3
-Text GLabel 10150 3650 0    50   Input ~ 0
+Text GLabel 10750 3700 0    50   Input ~ 0
 PA14-SWCLK
-Text GLabel 10150 3800 0    50   Input ~ 0
+Text GLabel 10750 3600 0    50   Input ~ 0
 PA13-SWDIO
-Text GLabel 10150 3950 0    50   Input ~ 0
+Text GLabel 10750 3800 0    50   Input ~ 0
 RESET1-TP3
 $Comp
 L power:GND #PWR035
 U 1 1 5C7F068D
-P 10150 4100
-F 0 "#PWR035" H 10150 3850 50  0001 C CNN
-F 1 "GND" H 10155 3927 50  0000 C CNN
-F 2 "" H 10150 4100 50  0001 C CNN
-F 3 "" H 10150 4100 50  0001 C CNN
-	1    10150 4100
-	1    0    0    -1  
+P 10750 3900
+F 0 "#PWR035" H 10750 3650 50  0001 C CNN
+F 1 "GND" V 10755 3727 50  0000 C CNN
+F 2 "" H 10750 3900 50  0001 C CNN
+F 3 "" H 10750 3900 50  0001 C CNN
+	1    10750 3900
+	0    1    1    0   
 $EndComp
 Text GLabel 9800 3000 0    50   Input ~ 0
 PA9-TX
@@ -1252,24 +1197,13 @@ Text GLabel 2900 1650 0    50   Input ~ 0
 PA9-TX
 Text GLabel 2900 1550 0    50   Input ~ 0
 PA10-RX
-$Comp
-L Connector:Conn_01x02_Male J9
-U 1 1 5C7CB96E
-P 2750 4500
-F 0 "J9" H 2850 4700 50  0000 C CNN
-F 1 "UART" H 2856 4587 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2750 4500 50  0001 C CNN
-F 3 "~" H 2750 4500 50  0001 C CNN
-	1    2750 4500
-	1    0    0    -1  
-$EndComp
-Text GLabel 2950 4500 2    50   Input ~ 0
+Text GLabel 2750 3950 2    50   Input ~ 0
 PA9-TX
-Text GLabel 2950 4600 2    50   Input ~ 0
+Text GLabel 2750 4050 2    50   Input ~ 0
 PA10-RX
-Text GLabel 2950 4000 2    50   Input ~ 0
+Text GLabel 2750 4250 2    50   Input ~ 0
 PA4-SWDIO-TMS
-Text GLabel 2950 3900 2    50   Input ~ 0
+Text GLabel 2750 4150 2    50   Input ~ 0
 PA5-SWCLK-TCK
 Text GLabel 3700 1250 2    50   Input ~ 0
 PA5-SWCLK-TCK
@@ -1296,10 +1230,10 @@ Connection ~ 2000 2900
 Wire Wire Line
 	2000 2900 2250 2900
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR040
 U 1 1 5C839423
 P 2000 2900
-F 0 "#PWR?" H 2000 2750 50  0001 C CNN
+F 0 "#PWR040" H 2000 2750 50  0001 C CNN
 F 1 "+5V" H 2015 3073 50  0000 C CNN
 F 2 "" H 2000 2900 50  0001 C CNN
 F 3 "" H 2000 2900 50  0001 C CNN
@@ -1308,4 +1242,38 @@ F 3 "" H 2000 2900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9550 1750 9850 1750
+$Comp
+L power:GND #PWR041
+U 1 1 5C8C9D72
+P 10150 2050
+F 0 "#PWR041" H 10150 1800 50  0001 C CNN
+F 1 "GND" H 10155 1877 50  0000 C CNN
+F 2 "" H 10150 2050 50  0001 C CNN
+F 3 "" H 10150 2050 50  0001 C CNN
+	1    10150 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 10150 2050
+$Comp
+L Connector:Conn_01x06_Male J4
+U 1 1 5C8CE1DD
+P 2550 4150
+F 0 "J4" H 2656 4528 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 2656 4437 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2550 4150 50  0001 C CNN
+F 3 "~" H 2550 4150 50  0001 C CNN
+	1    2550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J9
+U 1 1 5C8D5E24
+P 10950 3800
+F 0 "J9" H 10923 3680 50  0000 R CNN
+F 1 "Self_Flash" H 11450 4000 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 10950 3800 50  0001 C CNN
+F 3 "~" H 10950 3800 50  0001 C CNN
+	1    10950 3800
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
