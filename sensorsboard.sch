@@ -1193,9 +1193,9 @@ F 3 "~" H 9400 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 9250 2350
-Text GLabel 2900 1650 0    50   Input ~ 0
-PA9-TX
 Text GLabel 2900 1550 0    50   Input ~ 0
+PA9-TX
+Text GLabel 2900 1650 0    50   Input ~ 0
 PA10-RX
 Text GLabel 2750 3950 2    50   Input ~ 0
 PA9-TX
