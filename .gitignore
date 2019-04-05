@@ -1,3 +1,4 @@
 *.bak
 fp-lib-table
 sym-lib-table
+*.kicad_pcb-bak
