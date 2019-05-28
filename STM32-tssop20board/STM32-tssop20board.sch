@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:STM32-tssop20board-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -39,12 +39,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x03_Male J3
 U 1 1 5CA17AC9
-P 2850 2200
-F 0 "J3" H 2956 2478 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 2956 2387 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2850 2200 50  0001 C CNN
-F 3 "~" H 2850 2200 50  0001 C CNN
-	1    2850 2200
+P 1650 2500
+F 0 "J3" H 1756 2778 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 1756 2687 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1650 2500 50  0001 C CNN
+F 3 "~" H 1650 2500 50  0001 C CNN
+	1    1650 2500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -60,28 +60,28 @@ F 3 "~" H 3900 2300 50  0001 C CNN
 $EndComp
 Text GLabel 3800 2300 0    50   Input ~ 0
 Boot0
-Text GLabel 3050 2200 2    50   Input ~ 0
+Text GLabel 1850 2500 2    50   Input ~ 0
 Boot0
 $Comp
 L power:GND #PWR02
 U 1 1 5CA17D4F
-P 3050 2100
-F 0 "#PWR02" H 3050 1850 50  0001 C CNN
-F 1 "GND" V 3055 1972 50  0000 R CNN
-F 2 "" H 3050 2100 50  0001 C CNN
-F 3 "" H 3050 2100 50  0001 C CNN
-	1    3050 2100
+P 1850 2400
+F 0 "#PWR02" H 1850 2150 50  0001 C CNN
+F 1 "GND" V 1855 2272 50  0000 R CNN
+F 2 "" H 1850 2400 50  0001 C CNN
+F 3 "" H 1850 2400 50  0001 C CNN
+	1    1850 2400
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:VDD #PWR03
 U 1 1 5CA17DC8
-P 3050 2300
-F 0 "#PWR03" H 3050 2150 50  0001 C CNN
-F 1 "VDD" V 3067 2428 50  0000 L CNN
-F 2 "" H 3050 2300 50  0001 C CNN
-F 3 "" H 3050 2300 50  0001 C CNN
-	1    3050 2300
+P 1850 2600
+F 0 "#PWR03" H 1850 2450 50  0001 C CNN
+F 1 "VDD" V 1867 2728 50  0000 L CNN
+F 2 "" H 1850 2600 50  0001 C CNN
+F 3 "" H 1850 2600 50  0001 C CNN
+	1    1850 2600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -121,31 +121,19 @@ $Comp
 L Device:Crystal_Small Y1
 U 1 1 5CA18233
 P 3700 1900
-F 0 "Y1" H 3750 1800 50  0000 C CNN
-F 1 "8M" H 3650 1800 50  0000 C CNN
+F 0 "Y1" V 3750 1800 50  0000 C CNN
+F 1 "8M" V 3650 1800 50  0000 C CNN
 F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering" H 3700 1900 50  0001 C CNN
 F 3 "~" H 3700 1900 50  0001 C CNN
 	1    3700 1900
-	-1   0    0    1   
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4000 1900 3900 1900
-Wire Wire Line
-	4000 2000 3600 2000
-Wire Wire Line
-	3600 2000 3600 1900
-Text GLabel 3600 1700 1    50   Input ~ 0
+	4000 2000 3700 2000
+Text GLabel 3700 2000 3    50   Input ~ 0
 PF1
-Text GLabel 3900 1700 1    50   Input ~ 0
+Text GLabel 3700 1800 1    50   Input ~ 0
 PF0
-Wire Wire Line
-	3600 1900 3600 1700
-Connection ~ 3600 1900
-Wire Wire Line
-	3900 1700 3900 1900
-Connection ~ 3900 1900
-Wire Wire Line
-	3900 1900 3800 1900
 $Comp
 L Device:C_Small C1
 U 1 1 5CA1844A
@@ -669,4 +657,54 @@ Connection ~ 7950 800
 Wire Wire Line
 	7950 1100 7650 1100
 Connection ~ 7650 1100
+Connection ~ 3700 2000
+Wire Wire Line
+	4000 1900 3900 1900
+Wire Wire Line
+	3900 1900 3900 1800
+Wire Wire Line
+	3900 1800 3700 1800
+$Comp
+L power:GND #PWR021
+U 1 1 5CF21CAF
+P 3250 1900
+F 0 "#PWR021" H 3250 1650 50  0001 C CNN
+F 1 "GND" V 3255 1772 50  0000 R CNN
+F 2 "" H 3250 1900 50  0001 C CNN
+F 3 "" H 3250 1900 50  0001 C CNN
+	1    3250 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5CF225FD
+P 3350 1800
+F 0 "C3" V 3121 1800 50  0000 C CNN
+F 1 "20pF" V 3212 1800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3350 1800 50  0001 C CNN
+F 3 "~" H 3350 1800 50  0001 C CNN
+	1    3350 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5CF2309D
+P 3350 2000
+F 0 "C4" V 3400 2100 50  0000 C CNN
+F 1 "20pF" V 3500 2000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3350 2000 50  0001 C CNN
+F 3 "~" H 3350 2000 50  0001 C CNN
+	1    3350 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 2000 3700 2000
+Wire Wire Line
+	3450 1800 3700 1800
+Connection ~ 3700 1800
+Wire Wire Line
+	3250 1800 3250 1900
+Wire Wire Line
+	3250 1900 3250 2000
+Connection ~ 3250 1900
 $EndSCHEMATC
