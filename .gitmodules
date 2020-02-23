@@ -1,0 +1,3 @@
+[submodule "packages/hm10"]
+	path = packages/hm10
+	url = git@github.com:sztsian/hm10-kicad.git

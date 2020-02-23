@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:SBC-relay-5v-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -1071,4 +1070,19 @@ NoConn ~ 2850 2200
 NoConn ~ 2850 1900
 NoConn ~ 2850 2000
 NoConn ~ 3400 2950
+Text GLabel 1600 4200 0    50   Input ~ 0
+GND_IN
+$Comp
+L power:GND #PWR?
+U 1 1 5E5231AC
+P 1800 4200
+F 0 "#PWR?" H 1800 3950 50  0001 C CNN
+F 1 "GND" V 1805 4072 50  0000 R CNN
+F 2 "" H 1800 4200 50  0001 C CNN
+F 3 "" H 1800 4200 50  0001 C CNN
+	1    1800 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1600 4200 1800 4200
 $EndSCHEMATC
